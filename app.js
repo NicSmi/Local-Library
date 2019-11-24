@@ -14,7 +14,7 @@ var helmet = require('helmet');
 // 192.168.99.100
 
 
-var mongoDB = 'mongodb+srv://nicoy:nico14@cluster0-t6yvj.mongodb.net/test?retryWrites=true';
+var mongoDB = process.env.MONGODB_URL;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true }, () => {
   console.log(`Connection Successfull`);
