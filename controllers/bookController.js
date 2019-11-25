@@ -324,8 +324,8 @@ exports.book_update_post = [
         var book = new Book(
             {
                 title: req.body.title,
-                author: req.body.title,
-                summary: req.body.author,
+                author: req.body.author,
+                summary: req.body.summary,
                 isbn: req.body.isbn,
                 genre: (typeof req.body.genre==='undefined') ? [] : req.body.genre,
                 _id: req.params.id //This is required, or a new ID will be assigned!
